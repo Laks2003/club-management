@@ -810,27 +810,45 @@ $("cancelEvent").addEventListener("click", () => $("createEventPanel").classList
 
 $("createClubForm").addEventListener("submit", async event => {
     event.preventDefault();
-    if (currentRole !== "admin") return showMessage("Only admins can create clubs.", "danger");
-    const button = event.submitter;
-    if (button) button.disabled = true;
+
+    if (currentRole !== "admin") {
+        showMessage("Only admins can create clubs.", "danger");
+        return;
+    }
+
+    const form = $("createClubForm");
+    const button = event.submitter || form.querySelector('button[type="submit"]');
+    const name = $("clubName").value.trim();
+    const category = $("clubCategory").value.trim();
+    const description = $("clubDescription").value.trim();
+
+    if (!name || !category || !description) {
+        showMessage("Please complete all club fields.", "warning");
+        return;
+    }
+
+    if (button) {
+        button.disabled = true;
+        button.textContent = "Creating...";
+    }
 
     try {
         await api("/api/clubs", {
-            method:"POST",
-            body:JSON.stringify({
-                name:$("clubName").value.trim(),
-                category:$("clubCategory").value,
-                description:$("clubDescription").value.trim()
-            })
+            method: "POST",
+            body: JSON.stringify({ name, category, description })
         });
-        $("createClubForm").reset();
+
+        form.reset();
         $("createClubPanel").classList.add("hidden");
         showMessage("Club created successfully.", "success");
         await loadClubs();
     } catch (error) {
-        showMessage(error.message, "danger");
+        showMessage(error.message || "Could not create the club.", "danger");
     } finally {
-        if (button) button.disabled = false;
+        if (button) {
+            button.disabled = false;
+            button.textContent = "Create Club";
+        }
     }
 });
 
@@ -848,12 +866,11 @@ $("createEventForm").addEventListener("submit", async event => {
             method:"POST",
             body:JSON.stringify({
                 title:$("eventTitle").value.trim(),
-                clubId:clubId || undefined,
+                club:clubId || undefined,
                 date:new Date($("eventDate").value).toISOString(),
-                location:$("eventLocation").value,
-                fee,
+                venue:$("eventLocation").value,
                 description:$("eventDescription").value.trim(),
-                image:$("eventImage").value.trim() || undefined
+                imageUrl:$("eventImage").value.trim() || undefined
             })
         });
         $("createEventForm").reset();
