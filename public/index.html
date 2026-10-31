@@ -10,224 +10,10 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
 <style>
-:root {
-    --purple: #6025c7;
-    --purple-dark: #241b55;
-    --purple-light: #eee8ff;
-    --page: #f6f4ff;
-    --text: #17284c;
-    --muted: #64748b;
-    --border: #e8e3f6;
-}
-
-* { box-sizing: border-box; }
-
-body {
-    margin: 0;
-    background: var(--page);
-    color: var(--text);
-    font-family: Arial, sans-serif;
-}
-
-.navbar {
-    background: #fff;
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.brand {
-    color: var(--purple);
-    font-size: 25px;
-    font-weight: 800;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.nav-link {
-    color: #46536b;
-    font-weight: 700;
-}
-
-.nav-link:hover,
-.nav-link.active { color: var(--purple); }
-
-.btn-purple {
-    background: var(--purple);
-    color: white;
-    border: 1px solid var(--purple);
-}
-
-.btn-purple:hover {
-    background: #4b19a6;
-    color: white;
-}
-
-.btn-outline-purple {
-    border: 1px solid #c8b5ff;
-    color: var(--purple);
-    background: white;
-}
-
-.btn-outline-purple:hover {
-    background: var(--purple-light);
-    color: var(--purple);
-}
-
-main { padding: 28px 0 60px; }
-
-.hero {
-    min-height: 310px;
-    padding: 48px;
-    border-radius: 25px;
-    color: white;
-    background:
-        linear-gradient(90deg,rgba(22,34,79,.96),rgba(79,35,143,.75)),
-        url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=85") center/cover;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 18px 40px rgba(45,29,94,.12);
-}
-
-.hero h1 {
-    font-size: clamp(2rem,4vw,3.4rem);
-    font-weight: 800;
-}
-
-.hero p {
-    max-width: 760px;
-    line-height: 1.8;
-    font-size: 17px;
-}
-
-.eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 12px;
-    font-weight: 800;
-}
-
-.section-title {
-    font-weight: 800;
-    color: var(--purple-dark);
-}
-
-.muted { color: var(--muted); }
-
-.stat-card, .panel, .club-card, .event-card, .info-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 19px;
-    box-shadow: 0 8px 28px rgba(42,28,91,.045);
-}
-
-.stat-card {
-    padding: 22px;
-    display: flex;
-    align-items: center;
-    gap: 17px;
-    height: 100%;
-}
-
-.stat-icon {
-    width: 57px;
-    height: 57px;
-    border-radius: 17px;
-    background: var(--purple-light);
-    color: var(--purple);
-    display: grid;
-    place-items: center;
-    font-size: 25px;
-    flex-shrink: 0;
-}
-
-.stat-number {
-    font-size: 30px;
-    font-weight: 800;
-    line-height: 1.2;
-}
-
-.panel { padding: 23px; }
-
-.club-card, .event-card {
+    
+.about-panel {
     overflow: hidden;
-    height: 100%;
 }
-
-.card-photo {
-    height: 190px;
-    width: 100%;
-    object-fit: cover;
-    background: var(--purple-light);
-}
-
-.card-content { padding: 19px; }
-
-.card-content h5 { font-weight: 800; }
-
-.pill {
-    display: inline-block;
-    padding: 6px 10px;
-    border-radius: 30px;
-    font-size: 12px;
-    font-weight: 700;
-    background: var(--purple-light);
-    color: var(--purple);
-}
-
-.event-detail {
-    display: flex;
-    gap: 9px;
-    align-items: flex-start;
-    margin: 10px 0;
-    color: #526079;
-    font-size: 14px;
-}
-
-.event-detail i { color: var(--purple); }
-
-.form-control, .form-select {
-    border-radius: 10px;
-    padding: 11px 12px;
-}
-
-.form-control:focus, .form-select:focus {
-    border-color: #a78bfa;
-    box-shadow: 0 0 0 .2rem rgba(124,58,237,.12);
-}
-
-.table>:not(caption)>*>* { padding: 13px 11px; }
-
-.table thead th {
-    color: #59647b;
-    font-size: 12px;
-    text-transform: uppercase;
-}
-
-.empty-state {
-    padding: 32px 15px;
-    text-align: center;
-    color: var(--muted);
-}
-
-.empty-state i {
-    font-size: 30px;
-    color: var(--purple);
-}
-
-.content-section { scroll-margin-top: 90px; }
-
-footer {
-    color: var(--muted);
-    font-size: 13px;
-}
-
-#pageMessage { display: none; }
-
-.hidden { display: none !important; }
-
-.about-panel { overflow: hidden; }
 
 .about-image-wrapper {
     width: 100%;
@@ -264,43 +50,106 @@ footer {
     flex-shrink: 0;
 }
 
-.payment-panel {
-    border: 1px solid var(--border);
-    background: #fbfaff;
-    border-radius: 14px;
-    padding: 18px;
-}
-
 @media (max-width: 991.98px) {
-    .about-image-wrapper { height: 280px; }
+    .about-image-wrapper {
+        height: 280px;
+    }
 }
 
 @media (max-width: 575.98px) {
-    .about-image-wrapper { height: 220px; }
-    .about-text h2 { font-size: 1.7rem; }
+    .about-image-wrapper {
+        height: 220px;
+    }
+
+    .about-text h2 {
+        font-size: 1.7rem;
+    }
 }
 
-@media (max-width: 768px) {
-    .hero { padding: 28px 22px; min-height: 270px; }
-    .brand { font-size: 21px; }
-    main { padding-top: 18px; }
-    .panel { padding: 16px; }
+:root {
+    --purple: #6025c7;
+    --purple-dark: #241b55;
+    --purple-light: #eee8ff;
+    --page: #f6f4ff;
+    --text: #17284c;
+    --muted: #64748b;
+    --border: #e8e3f6;
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--page); color:var(--text); font-family:Arial,sans-serif; }
+.navbar { background:#fff; border-bottom:1px solid var(--border); position:sticky; top:0; z-index:1000; }
+.brand { color:var(--purple); font-size:25px; font-weight:800; text-decoration:none; white-space:nowrap; }
+.nav-link { color:#46536b; font-weight:700; }
+.nav-link:hover,.nav-link.active { color:var(--purple); }
+.btn-purple { background:var(--purple); color:white; border:1px solid var(--purple); }
+.btn-purple:hover { background:#4b19a6; color:white; }
+.btn-outline-purple { border:1px solid #c8b5ff; color:var(--purple); background:white; }
+.btn-outline-purple:hover { background:var(--purple-light); color:var(--purple); }
+main { padding:28px 0 60px; }
+.hero {
+    min-height:310px; padding:48px; border-radius:25px; color:white;
+    background:linear-gradient(90deg,rgba(22,34,79,.96),rgba(79,35,143,.75)),
+    url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=85") center/cover;
+    display:flex; align-items:center; box-shadow:0 18px 40px rgba(45,29,94,.12);
+}
+.hero h1 { font-size:clamp(2rem,4vw,3.4rem); font-weight:800; }
+.hero p { max-width:760px; line-height:1.8; font-size:17px; }
+.eyebrow { text-transform:uppercase; letter-spacing:3px; font-size:12px; font-weight:800; }
+.section-title { font-weight:800; color:var(--purple-dark); }
+.muted { color:var(--muted); }
+.stat-card,.panel,.club-card,.event-card,.info-card {
+    background:white; border:1px solid var(--border); border-radius:19px;
+    box-shadow:0 8px 28px rgba(42,28,91,.045);
+}
+.stat-card { padding:22px; display:flex; align-items:center; gap:17px; height:100%; }
+.stat-icon {
+    width:57px; height:57px; border-radius:17px; background:var(--purple-light);
+    color:var(--purple); display:grid; place-items:center; font-size:25px; flex-shrink:0;
+}
+.stat-number { font-size:30px; font-weight:800; line-height:1.2; }
+.panel { padding:23px; }
+.club-card,.event-card { overflow:hidden; height:100%; }
+.card-photo { height:190px; width:100%; object-fit:cover; background:var(--purple-light); }
+.card-content { padding:19px; }
+.card-content h5 { font-weight:800; }
+.pill { display:inline-block; padding:6px 10px; border-radius:30px; font-size:12px; font-weight:700; background:var(--purple-light); color:var(--purple); }
+.event-detail { display:flex; gap:9px; align-items:flex-start; margin:10px 0; color:#526079; font-size:14px; }
+.event-detail i { color:var(--purple); }
+.form-control,.form-select { border-radius:10px; padding:11px 12px; }
+.form-control:focus,.form-select:focus { border-color:#a78bfa; box-shadow:0 0 0 .2rem rgba(124,58,237,.12); }
+.table>:not(caption)>*>* { padding:13px 11px; }
+.table thead th { color:#59647b; font-size:12px; text-transform:uppercase; }
+.empty-state { padding:32px 15px; text-align:center; color:var(--muted); }
+.empty-state i { font-size:30px; color:var(--purple); }
+.content-section { scroll-margin-top:90px; }
+footer { color:var(--muted); font-size:13px; }
+#pageMessage { display:none; }
+.hidden { display:none!important; }
+.payment-option {
+    border:1px solid var(--border); border-radius:14px; padding:14px;
+    cursor:pointer; display:flex; gap:10px; align-items:center; height:100%;
+}
+.payment-option:has(input:checked) { border-color:var(--purple); background:var(--purple-light); }
+.payment-option input { accent-color:var(--purple); }
+.payment-icon { font-size:25px; color:var(--purple); }
+.payment-panel { border:1px solid var(--border); background:#fbfaff; border-radius:14px; padding:18px; }
+@media(max-width:768px) {
+    .hero { padding:28px 22px; min-height:270px; }
+    .brand { font-size:21px; }
+    main { padding-top:18px; }
+    .panel { padding:16px; }
 }
 </style>
 </head>
 
 <body>
-
 <nav class="navbar navbar-expand-xl">
 <div class="container-fluid px-3 px-lg-4">
     <a class="brand" href="#dashboard">CampusConnect</a>
-
-    <button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto align-items-xl-center gap-xl-2" id="navigation">
             <li class="nav-item"><a class="nav-link" href="#dashboard">Dashboard</a></li>
@@ -322,7 +171,6 @@ footer {
 </nav>
 
 <main class="container-fluid px-3 px-lg-4">
-
 <div id="pageMessage" class="alert mb-4" role="status" aria-live="polite"></div>
 
 <section id="dashboard" class="content-section">
@@ -341,189 +189,79 @@ footer {
             <h2 class="section-title mb-1">Your campus at a glance</h2>
             <p class="muted mb-0" id="statsSubtitle">An overview of clubs, events, and participation.</p>
         </div>
-        <button class="btn btn-outline-purple" id="refreshBtn">
-            <i class="bi bi-arrow-clockwise me-1"></i> Refresh
-        </button>
+        <button class="btn btn-outline-purple" id="refreshBtn"><i class="bi bi-arrow-clockwise me-1"></i> Refresh</button>
     </div>
 
     <div class="row g-3 mb-5">
-        <div class="col-6 col-xl-3">
-            <div class="stat-card"><div class="stat-icon"><i class="bi bi-people"></i></div>
-                <div><div class="stat-number" id="clubsCount">—</div><div class="muted">Clubs</div></div>
-            </div>
-        </div>
-        <div class="col-6 col-xl-3">
-            <div class="stat-card"><div class="stat-icon"><i class="bi bi-calendar-event"></i></div>
-                <div><div class="stat-number" id="eventsCount">—</div><div class="muted">Events</div></div>
-            </div>
-        </div>
-        <div class="col-6 col-xl-3">
-            <div class="stat-card"><div class="stat-icon"><i class="bi bi-ticket-perforated"></i></div>
-                <div><div class="stat-number" id="registeredCount">—</div><div id="registeredLabel" class="muted">Events Registered</div></div>
-            </div>
-        </div>
-        <div class="col-6 col-xl-3" id="pendingStatWrap">
-            <div class="stat-card"><div class="stat-icon"><i class="bi bi-hourglass-split"></i></div>
-                <div><div class="stat-number" id="pendingCount">—</div><div class="muted" id="pendingLabel">Pending Requests</div></div>
-            </div>
-        </div>
+        <div class="col-6 col-xl-3"><div class="stat-card"><div class="stat-icon"><i class="bi bi-people"></i></div><div><div class="stat-number" id="clubsCount">—</div><div class="muted">Clubs</div></div></div></div>
+        <div class="col-6 col-xl-3"><div class="stat-card"><div class="stat-icon"><i class="bi bi-calendar-event"></i></div><div><div class="stat-number" id="eventsCount">—</div><div class="muted">Events</div></div></div></div>
+        <div class="col-6 col-xl-3"><div class="stat-card"><div class="stat-icon"><i class="bi bi-ticket-perforated"></i></div><div><div class="stat-number" id="registeredCount">—</div><div id="registeredLabel" class="muted">Events Registered</div></div></div></div>
+        <div class="col-6 col-xl-3" id="pendingStatWrap"><div class="stat-card"><div class="stat-icon"><i class="bi bi-hourglass-split"></i></div><div><div class="stat-number" id="pendingCount">—</div><div class="muted" id="pendingLabel">Pending Requests</div></div></div></div>
     </div>
 </section>
 
 <section id="clubs" class="content-section mb-5">
     <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3">
-        <div>
-            <h2 class="section-title mb-1">Campus Clubs</h2>
-            <p class="muted mb-0">Find a community that matches your interests.</p>
-        </div>
-        <button class="btn btn-purple hidden" id="createClubToggle">
-            <i class="bi bi-plus-lg me-1"></i> Create Club
-        </button>
+        <div><h2 class="section-title mb-1">Campus Clubs</h2><p class="muted mb-0">Find a community that matches your interests.</p></div>
+        <button class="btn btn-purple hidden" id="createClubToggle"><i class="bi bi-plus-lg me-1"></i> Create Club</button>
     </div>
 
     <div id="createClubPanel" class="panel mb-4 hidden">
         <h5 class="fw-bold mb-3">Create a Club</h5>
         <form id="createClubForm">
             <div class="row g-3">
-                <div class="col-md-6">
-                    <label class="form-label" for="clubName">Club name</label>
-                    <input class="form-control" id="clubName" required maxlength="100">
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label" for="clubCategory">Category</label>
+                <div class="col-md-6"><label class="form-label" for="clubName">Club name</label><input class="form-control" id="clubName" required maxlength="100"></div>
+                <div class="col-md-6"><label class="form-label" for="clubCategory">Category</label>
                     <select class="form-select" id="clubCategory" required>
-                        <option value="">Choose category</option>
-                        <option>Technology</option>
-                        <option>Arts and Culture</option>
-                        <option>Sports</option>
-                        <option>Literature</option>
-                        <option>Social Service</option>
-                        <option>Entrepreneurship</option>
-                        <option>Science</option>
-                        <option>Other</option>
+                        <option value="">Choose category</option><option>Technology</option><option>Arts and Culture</option><option>Sports</option><option>Literature</option><option>Social Service</option><option>Entrepreneurship</option><option>Science</option><option>Other</option>
                     </select>
                 </div>
-                <div class="col-12">
-                    <label class="form-label" for="clubDescription">Description</label>
-                    <textarea class="form-control" id="clubDescription" rows="3" required></textarea>
-                </div>
-                <div class="col-12 d-flex gap-2">
-                    <button class="btn btn-purple" type="submit">Create Club</button>
-                    <button class="btn btn-outline-secondary" type="button" id="cancelClub">Cancel</button>
-                </div>
+                <div class="col-12"><label class="form-label" for="clubDescription">Description</label><textarea class="form-control" id="clubDescription" rows="3" required></textarea></div>
+                <div class="col-12 d-flex gap-2"><button class="btn btn-purple" type="submit">Create Club</button><button class="btn btn-outline-secondary" type="button" id="cancelClub">Cancel</button></div>
             </div>
         </form>
     </div>
-
-    <div id="clubsGrid" class="row g-4">
-        <div class="col-12"><div class="panel empty-state">Loading clubs...</div></div>
-    </div>
+    <div id="clubsGrid" class="row g-4"><div class="col-12"><div class="panel empty-state">Loading clubs...</div></div></div>
 </section>
 
 <section id="events" class="content-section mb-5">
     <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3">
-        <div>
-            <h2 class="section-title mb-1">Upcoming Events</h2>
-            <p class="muted mb-0">Check the venue, date, and fee before registering.</p>
-        </div>
-        <button class="btn btn-purple hidden" id="createEventToggle">
-            <i class="bi bi-plus-lg me-1"></i> Create Event
-        </button>
+        <div><h2 class="section-title mb-1">Upcoming Events</h2><p class="muted mb-0">Check the venue, date, and fee before registering.</p></div>
+        <button class="btn btn-purple hidden" id="createEventToggle"><i class="bi bi-plus-lg me-1"></i> Create Event</button>
     </div>
 
     <div id="createEventPanel" class="panel mb-4 hidden">
         <h5 class="fw-bold mb-3">Create an Event</h5>
         <form id="createEventForm">
             <div class="row g-3">
-                <div class="col-md-6">
-                    <label class="form-label" for="eventTitle">Event title</label>
-                    <input class="form-control" id="eventTitle" required maxlength="150">
-                </div>
-
-                <div class="col-md-6">
-                    <label class="form-label" for="eventClub">Club</label>
-                    <select class="form-select" id="eventClub" required>
-                        <option value="">Choose a club</option>
-                    </select>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="form-label" for="eventDate">Date and time</label>
-                    <input class="form-control" id="eventDate" type="datetime-local" required>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="form-label" for="eventLocation">Location</label>
+                <div class="col-md-6"><label class="form-label" for="eventTitle">Event title</label><input class="form-control" id="eventTitle" required maxlength="150"></div>
+                <div class="col-md-6"><label class="form-label" for="eventClub">Club</label><select class="form-select" id="eventClub"><option value="">No club selected</option></select></div>
+                <div class="col-md-6"><label class="form-label" for="eventDate">Date and time</label><input class="form-control" id="eventDate" type="datetime-local" required></div>
+                <div class="col-md-6"><label class="form-label" for="eventLocation">Location</label>
                     <select class="form-select" id="eventLocation" required>
-                        <option value="">Choose a venue</option>
-                        <option>TT Gallery</option>
-                        <option>SJT Ground</option>
-                        <option>Lawn</option>
-                        <option>MGB Block</option>
-                        <option>Library</option>
-                        <option>Auditorium</option>
-                        <option>Other</option>
+                        <option value="">Choose a venue</option><option>TT Gallery</option><option>SJT Ground</option><option>Lawn</option><option>MGB Block</option><option>Library</option><option>Auditorium</option><option>Other</option>
                     </select>
                 </div>
-
-                <div class="col-md-6">
-                    <label class="form-label" for="eventFee">Entry fee (₹)</label>
-                    <input class="form-control" id="eventFee" type="number" value="100" readonly>
-                    <div class="form-text">The current server configuration sets the event fee to ₹100.</div>
-                </div>
-
-                <div class="col-md-6">
-                    <label class="form-label" for="eventImage">Image URL (optional)</label>
-                    <input class="form-control" id="eventImage" type="url" placeholder="https://...">
-                </div>
-
-                <div class="col-12">
-                    <label class="form-label" for="eventDescription">Description</label>
-                    <textarea class="form-control" id="eventDescription" rows="3" required></textarea>
-                </div>
-
-                <div class="col-12 d-flex gap-2">
-                    <button class="btn btn-purple" type="submit">Create Event</button>
-                    <button class="btn btn-outline-secondary" type="button" id="cancelEvent">Cancel</button>
-                </div>
+                <div class="col-md-6"><label class="form-label" for="eventFee">Entry fee (₹)</label><input class="form-control" id="eventFee" type="number" min="0" step="1" value="0" required><div class="form-text">Enter 0 for a free event.</div></div>
+                <div class="col-md-6"><label class="form-label" for="eventImage">Image URL (optional)</label><input class="form-control" id="eventImage" type="url" placeholder="https://..."></div>
+                <div class="col-12"><label class="form-label" for="eventDescription">Description</label><textarea class="form-control" id="eventDescription" rows="3" required></textarea></div>
+                <div class="col-12 d-flex gap-2"><button class="btn btn-purple" type="submit">Create Event</button><button class="btn btn-outline-secondary" type="button" id="cancelEvent">Cancel</button></div>
             </div>
         </form>
     </div>
-
-    <div id="eventsGrid" class="row g-4">
-        <div class="col-12"><div class="panel empty-state">Loading events...</div></div>
-    </div>
+    <div id="eventsGrid" class="row g-4"><div class="col-12"><div class="panel empty-state">Loading events...</div></div></div>
 </section>
 
 <section id="requests" class="content-section mb-5 hidden">
-    <div class="mb-3">
-        <h2 class="section-title mb-1">Membership Requests</h2>
-        <p class="muted mb-0">Review and manage student club membership requests.</p>
-    </div>
-    <div class="panel table-responsive">
-        <table class="table align-middle mb-0">
-            <thead><tr><th>Student</th><th>Club</th><th>Status</th><th>Action</th></tr></thead>
-            <tbody id="requestsBody">
-                <tr><td colspan="4" class="text-center muted">Loading requests...</td></tr>
-            </tbody>
-        </table>
-    </div>
+    <div class="mb-3"><h2 class="section-title mb-1">Membership Requests</h2><p class="muted mb-0">Review and manage student club membership requests.</p></div>
+    <div class="panel table-responsive"><table class="table align-middle mb-0"><thead><tr><th>Student</th><th>Club</th><th>Status</th><th>Action</th></tr></thead><tbody id="requestsBody"><tr><td colspan="4" class="text-center muted">Loading requests...</td></tr></tbody></table></div>
 </section>
 
 <section id="users" class="content-section mb-5 hidden">
-    <div class="mb-3">
-        <h2 class="section-title mb-1">Campus Users</h2>
-        <p class="muted mb-0">View registered accounts.</p>
-    </div>
-    <div class="panel table-responsive">
-        <table class="table align-middle mb-0">
-            <thead><tr><th>Name</th><th>Email</th><th>Department</th><th>Role</th></tr></thead>
-            <tbody id="usersBody">
-                <tr><td colspan="4" class="text-center muted">Loading users...</td></tr>
-            </tbody>
-        </table>
-    </div>
+    <div class="mb-3"><h2 class="section-title mb-1">Campus Users</h2><p class="muted mb-0">View registered accounts.</p></div>
+    <div class="panel table-responsive"><table class="table align-middle mb-0"><thead><tr><th>Name</th><th>Email</th><th>Department</th><th>Role</th></tr></thead><tbody id="usersBody"><tr><td colspan="4" class="text-center muted">Loading users...</td></tr></tbody></table></div>
 </section>
+
 
 <section id="about" class="content-section mb-5">
     <div class="panel about-panel">
@@ -538,18 +276,40 @@ footer {
                     >
                 </div>
             </div>
+
             <div class="col-12 col-lg-7 about-text">
-                <div class="eyebrow mb-2" style="color:var(--purple)">Join · Connect · Belong</div>
+                <div class="eyebrow mb-2" style="color:var(--purple)">
+                    Join · Connect · Belong
+                </div>
+
                 <h2 class="section-title mb-3">Clubs &amp; Events</h2>
+
                 <p class="muted">
                     Explore your interests, meet new people, and be part of
                     something bigger. From club meetings to exciting events,
                     there is always something happening on campus.
                 </p>
-                <div class="about-feature"><i class="bi bi-people"></i><span>Join student clubs</span></div>
-                <div class="about-feature"><i class="bi bi-calendar-event"></i><span>Attend exciting events</span></div>
-                <div class="about-feature"><i class="bi bi-star"></i><span>Build new skills</span></div>
-                <div class="about-feature"><i class="bi bi-heart"></i><span>Make lasting friendships</span></div>
+
+                <div class="about-feature">
+                    <i class="bi bi-people"></i>
+                    <span>Join student clubs</span>
+                </div>
+
+                <div class="about-feature">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>Attend exciting events</span>
+                </div>
+
+                <div class="about-feature">
+                    <i class="bi bi-star"></i>
+                    <span>Build new skills</span>
+                </div>
+
+                <div class="about-feature">
+                    <i class="bi bi-heart"></i>
+                    <span>Make lasting friendships</span>
+                </div>
+
                 <a href="#clubs" class="btn btn-purple mt-3">
                     Get Involved <i class="bi bi-arrow-right ms-2"></i>
                 </a>
@@ -558,46 +318,19 @@ footer {
     </div>
 </section>
 
+
 <section id="support" class="content-section mb-5">
     <div class="row g-4">
-        <div class="col-lg-7">
-            <div class="panel h-100">
-                <h2 class="section-title">Need Help?</h2>
-                <p class="muted">
-                    If you cannot log in, your account is not working, or you have a
-                    problem with a club or event registration, contact the CampusConnect administrator.
-                </p>
-                <div class="d-flex align-items-start gap-3 mt-4">
-                    <div class="stat-icon"><i class="bi bi-envelope"></i></div>
-                    <div>
-                        <div class="fw-bold">Administrator Support</div>
-                        <a href="mailto:skss0722@gmail.com">skss0722@gmail.com</a>
-                        <div class="muted small mt-1">Include your account email and a short description of the issue. Never send your password.</div>
-                    </div>
-                </div>
-                <a class="btn btn-purple mt-4" href="mailto:skss0722@gmail.com?subject=CampusConnect%20Support">
-                    <i class="bi bi-send me-1"></i> Email Support
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-5">
-            <div class="panel h-100">
-                <h5 class="fw-bold">How it works</h5>
-                <div class="event-detail"><i class="bi bi-check-circle-fill"></i><span>Explore clubs and submit membership requests.</span></div>
-                <div class="event-detail"><i class="bi bi-check-circle-fill"></i><span>Review event dates, venues, and entry fees.</span></div>
-                <div class="event-detail"><i class="bi bi-check-circle-fill"></i><span>Register for events and check your registration status.</span></div>
-                <div class="event-detail"><i class="bi bi-check-circle-fill"></i><span>Coordinators can record attendance for registered students.</span></div>
-            </div>
-        </div>
+        <div class="col-lg-7"><div class="panel h-100"><h2 class="section-title">Need Help?</h2><p class="muted">If you cannot log in, your account is not working, or you have a problem with a club or event registration, contact the CampusConnect administrator.</p><div class="d-flex align-items-start gap-3 mt-4"><div class="stat-icon"><i class="bi bi-envelope"></i></div><div><div class="fw-bold">Administrator Support</div><a href="mailto:skss0722@gmail.com">skss0722@gmail.com</a><div class="muted small mt-1">Include your account email and a short description of the issue. Never send your password.</div></div></div><a class="btn btn-purple mt-4" href="mailto:skss0722@gmail.com?subject=CampusConnect%20Support"><i class="bi bi-send me-1"></i> Email Support</a></div></div>
+        <div class="col-lg-5"><div class="panel h-100"><h5 class="fw-bold">How it works</h5><div class="event-detail"><i class="bi bi-check-circle-fill"></i><span>Explore clubs and submit membership requests.</span></div><div class="event-detail"><i class="bi bi-check-circle-fill"></i><span>Review event dates, venues, and entry fees.</span></div><div class="event-detail"><i class="bi bi-check-circle-fill"></i><span>Register for events and check your registration status.</span></div><div class="event-detail"><i class="bi bi-check-circle-fill"></i><span>Coordinators can record attendance for registered students.</span></div></div></div>
     </div>
 </section>
-
 <footer class="text-center py-3">CampusConnect · College Clubs and Events</footer>
 </main>
 
-<!-- Event registration modal -->
+<!-- Registration and payment form -->
 <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
 <div class="modal-content border-0 rounded-4">
     <div class="modal-header">
         <h5 class="modal-title fw-bold">Event Registration</h5>
@@ -613,13 +346,62 @@ footer {
                     <span class="fw-bold">Registration fee</span>
                     <strong class="fs-4" id="paymentAmount">₹0</strong>
                 </div>
-                <p class="small muted mb-0 mt-1">This demo does not process real payments.</p>
+                <p class="small muted mb-0 mt-1">Select a payment method and complete the form below to continue.</p>
             </div>
 
-            <p class="small muted">
-                The current CampusConnect payment route is simulated. No payment details are required.
-                Do not enter card numbers, CVV, UPI PINs, or banking passwords.
-            </p>
+            <label class="form-label fw-bold">Choose payment method</label>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="payment-option">
+                        <input type="radio" name="paymentMethod" value="upi">
+                        <i class="bi bi-phone payment-icon"></i>
+                        <span><strong class="d-block">UPI</strong><small class="muted">Pay using a UPI ID</small></span>
+                    </label>
+                </div>
+                <div class="col-md-6">
+                    <label class="payment-option">
+                        <input type="radio" name="paymentMethod" value="card">
+                        <i class="bi bi-credit-card payment-icon"></i>
+                        <span><strong class="d-block">Credit / Debit Card</strong><small class="muted">Card payment details</small></span>
+                    </label>
+                </div>
+            </div>
+
+            <div id="upiFields" class="payment-panel hidden">
+                <h6 class="fw-bold mb-3"><i class="bi bi-phone me-2"></i>UPI details</h6>
+                <div class="mb-3">
+                    <label class="form-label" for="upiId">UPI ID</label>
+                    <input class="form-control" id="upiId" placeholder="example@upi" autocomplete="off">
+                    <div class="form-text">Enter a UPI ID for the website registration form.</div>
+                </div>
+                <div class="mb-0">
+                    <label class="form-label" for="upiName">Account holder name</label>
+                    <input class="form-control" id="upiName" placeholder="Name on UPI account" autocomplete="off">
+                </div>
+            </div>
+
+            <div id="cardFields" class="payment-panel hidden">
+                <h6 class="fw-bold mb-3"><i class="bi bi-credit-card me-2"></i>Card details</h6>
+                <div class="mb-3">
+                    <label class="form-label" for="cardName">Cardholder name</label>
+                    <input class="form-control" id="cardName" placeholder="Name on card" autocomplete="off">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="cardNumber">Card number</label>
+                    <input class="form-control" id="cardNumber" inputmode="numeric" maxlength="23" placeholder="Enter card number" autocomplete="off">
+                </div>
+                <div class="row g-3">
+                    <div class="col-6">
+                        <label class="form-label" for="cardExpiry">Expiry date</label>
+                        <input class="form-control" id="cardExpiry" placeholder="MM/YY" maxlength="5" autocomplete="off">
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label" for="cardCvv">CVV</label>
+                        <input class="form-control" id="cardCvv" type="password" inputmode="numeric" maxlength="4" placeholder="CVV" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <p class="small muted mt-3 mb-0">This form records event registration on CampusConnect only. It does not process bank payments. Do not enter real card details, CVV, UPI PIN, or banking passwords.</p>
         </div>
 
         <div id="registrationMessage" class="alert hidden mt-3 mb-0" role="status" aria-live="polite"></div>
@@ -633,7 +415,6 @@ footer {
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
 const $ = id => document.getElementById(id);
 
@@ -683,16 +464,12 @@ const imageByCategory = {
 
 function getArray(data, keys = []) {
     if (Array.isArray(data)) return data;
-    for (const key of keys) {
-        if (Array.isArray(data?.[key])) return data[key];
-    }
+    for (const key of keys) if (Array.isArray(data?.[key])) return data[key];
     return [];
 }
 
 function normaliseId(value) {
-    if (value && typeof value === "object") {
-        return String(value._id || value.id || "");
-    }
+    if (value && typeof value === "object") return String(value._id || value.id || "");
     return value == null ? "" : String(value);
 }
 
@@ -710,11 +487,7 @@ function isStaff() {
 
 function escapeHtml(value) {
     return String(value ?? "").replace(/[&<>"']/g, char => ({
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;",
-        "'": "&#39;"
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
     })[char]);
 }
 
@@ -734,7 +507,7 @@ async function api(url, options = {}) {
         credentials: "same-origin",
         ...options,
         headers: {
-            ...(options.body instanceof FormData ? {} : {"Content-Type": "application/json"}),
+            ...(options.body instanceof FormData ? {} : {"Content-Type":"application/json"}),
             ...(options.headers || {})
         }
     });
@@ -750,16 +523,13 @@ async function api(url, options = {}) {
     }
 
     if (!response.ok) {
-        throw new Error(
-            typeof data === "string"
-                ? data
-                : data.message || data.error || "Request failed (" + response.status + ")."
-        );
+        throw new Error(typeof data === "string" ? data : data.message || data.error || "Request failed (" + response.status + ").");
     }
-
     return data;
 }
 
+/* Select an image from category and event title so different events
+   do not all receive the same fallback image. */
 function imageFor(category, title = "") {
     const text = (String(category || "") + " " + String(title || "")).toLowerCase();
     let key = "default";
@@ -773,37 +543,26 @@ function imageFor(category, title = "") {
     const choices = imageByCategory[key];
     let hash = 0;
     const seed = String(title || category || "campus-event");
-
-    for (let i = 0; i < seed.length; i++) {
-        hash = (hash * 31 + seed.charCodeAt(i)) >>> 0;
-    }
-
+    for (let i = 0; i < seed.length; i++) hash = (hash * 31 + seed.charCodeAt(i)) >>> 0;
     return choices[hash % choices.length];
 }
 
 function formatDate(date) {
     if (!date) return "Date to be announced";
-
     const parsed = new Date(date);
-
-    return Number.isNaN(parsed.getTime())
-        ? String(date)
-        : parsed.toLocaleString([], {dateStyle: "medium", timeStyle: "short"});
+    return Number.isNaN(parsed.getTime()) ? String(date) : parsed.toLocaleString([], {dateStyle:"medium", timeStyle:"short"});
 }
 
 function eventFee(event) {
     const raw = event.fee ?? event.entryFee ?? event.price ?? event.registrationFee ?? 0;
     const amount = Number(raw);
-
     if (!Number.isFinite(amount) || amount <= 0) return "Free";
-
     return "₹" + amount.toLocaleString("en-IN");
 }
 
 function eventAmount(event) {
     const raw = event.fee ?? event.entryFee ?? event.price ?? event.registrationFee ?? 0;
     const amount = Number(raw);
-
     return Number.isFinite(amount) && amount > 0 ? amount : 0;
 }
 
@@ -821,67 +580,47 @@ function eventIsRegistered(event) {
 }
 
 function setRoleNavigation() {
-    $("welcomeTitle").textContent =
-        "Welcome, " + (currentUser?.name || currentUser?.fullName || currentUser?.email || "Student") + "!";
-
+    $("welcomeTitle").textContent = "Welcome, " + (currentUser?.name || currentUser?.fullName || currentUser?.email || "Student") + "!";
     $("requestsNav").classList.toggle("hidden", !isStaff());
     $("usersNav").classList.toggle("hidden", currentRole !== "admin");
     $("attendanceNav").classList.toggle("hidden", !isStaff());
-
     $("requests").classList.toggle("hidden", !isStaff());
     $("users").classList.toggle("hidden", currentRole !== "admin");
-
     $("createClubToggle").classList.toggle("hidden", currentRole !== "admin");
     $("createEventToggle").classList.toggle("hidden", !isStaff());
-
     $("pendingStatWrap").classList.toggle("hidden", currentRole === "student");
-
-    $("registeredLabel").textContent =
-        currentRole === "student" ? "Events Registered" : "Memberships";
-
-    $("statsSubtitle").textContent =
-        currentRole === "student"
-            ? "Your clubs, event registrations, and campus activities."
-            : currentRole === "coordinator"
-                ? "Your overview of clubs, events, and membership requests."
-                : "An overview of campus clubs, events, and requests.";
+    $("registeredLabel").textContent = currentRole === "student" ? "Events Registered" : "Memberships";
+    $("statsSubtitle").textContent = currentRole === "student"
+        ? "Your clubs, event registrations, and campus activities."
+        : currentRole === "coordinator"
+            ? "Your overview of clubs, events, and membership requests."
+            : "An overview of campus clubs, events, and requests.";
 }
 
 async function loadCurrentUser() {
     const result = await api("/api/auth/me");
-
     currentUser = result.user || result;
     currentRole = roleName(currentUser);
-
-    if (!["admin", "coordinator", "student"].includes(currentRole)) {
-        currentRole = "student";
-    }
-
+    if (!["admin","coordinator","student"].includes(currentRole)) currentRole = "student";
     setRoleNavigation();
 }
 
 async function loadClubs() {
     const result = await api("/api/clubs");
-
-    clubsData = getArray(result, ["clubs", "data", "results"]);
-
+    clubsData = getArray(result, ["clubs","data","results"]);
     renderClubs();
     populateClubSelect();
 }
 
 function renderClubs() {
     const grid = $("clubsGrid");
-
     if (!clubsData.length) {
-        grid.innerHTML =
-            '<div class="col-12"><div class="panel empty-state"><i class="bi bi-people d-block mb-2"></i>No clubs are available yet.</div></div>';
-
+        grid.innerHTML = '<div class="col-12"><div class="panel empty-state"><i class="bi bi-people d-block mb-2"></i>No clubs are available yet.</div></div>';
         $("clubsCount").textContent = "0";
         return;
     }
 
     $("clubsCount").textContent = clubsData.length;
-
     grid.innerHTML = clubsData.map(club => {
         const name = club.name || club.title || "Campus Club";
         const category = club.category || club.type || "Student Community";
@@ -892,13 +631,10 @@ function renderClubs() {
 
         const alreadyMember = myMemberships.some(item => {
             const clubRef = normaliseId(item.club?._id || item.club || item.clubId);
-
-            return clubRef === id &&
-                ["approved", "accepted", "active"].includes(String(item.status || "").toLowerCase());
+            return clubRef === id && ["approved","accepted","active"].includes(String(item.status || "").toLowerCase());
         });
 
         let action = "";
-
         if (currentRole === "student") {
             action = alreadyMember
                 ? '<button class="btn btn-outline-secondary w-100" disabled><i class="bi bi-check-circle me-1"></i> Member</button>'
@@ -919,59 +655,38 @@ function renderClubs() {
 
 function populateClubSelect() {
     const select = $("eventClub");
-
-    select.replaceChildren(new Option("Choose a club", ""));
-
-    clubsData.forEach(club => {
-        const id = normaliseId(club._id || club.id);
-
-        if (id) {
-            select.add(new Option(club.name || club.title || "Club", id));
-        }
-    });
+    select.replaceChildren(new Option("No club selected", ""));
+    clubsData.forEach(club => select.add(new Option(club.name || club.title || "Club", normaliseId(club._id || club.id))));
 }
 
 async function loadEvents() {
     const result = await api("/api/events");
-
-    eventsData = getArray(result, ["events", "data", "results"]);
+    eventsData = getArray(result, ["events","data","results"]);
     registeredEventIds = new Set();
 
     if (currentRole === "student") {
         const myRegistrations = await api("/api/events/registrations/my");
-        const list = getArray(myRegistrations, ["registrations", "events", "data", "results"]);
-
+        const list = getArray(myRegistrations, ["registrations","events","data","results"]);
         list.forEach(item => {
             const id = normaliseId(item.event?._id || item.event || item.eventId);
-
             if (id) registeredEventIds.add(id);
         });
-
         $("registeredCount").textContent = registeredEventIds.size;
     }
-
     renderEvents();
 }
 
 function renderEvents() {
     const grid = $("eventsGrid");
-
     $("eventsCount").textContent = eventsData.length;
 
     if (!eventsData.length) {
-        grid.innerHTML =
-            '<div class="col-12"><div class="panel empty-state"><i class="bi bi-calendar-event d-block mb-2"></i>No events found.</div></div>';
-
-        if (currentRole === "student") {
-            $("registeredCount").textContent = registeredEventIds.size;
-        }
-
+        grid.innerHTML = '<div class="col-12"><div class="panel empty-state"><i class="bi bi-calendar-event d-block mb-2"></i>No events found.</div></div>';
+        if (currentRole === "student") $("registeredCount").textContent = registeredEventIds.size;
         return;
     }
 
-    if (currentRole === "student") {
-        $("registeredCount").textContent = registeredEventIds.size;
-    }
+    if (currentRole === "student") $("registeredCount").textContent = registeredEventIds.size;
 
     grid.innerHTML = eventsData.map(event => {
         const id = eventId(event);
@@ -984,7 +699,6 @@ function renderEvents() {
         const registered = eventIsRegistered(event);
 
         let action = "";
-
         if (currentRole === "student") {
             action = registered
                 ? '<button class="btn btn-outline-success w-100" disabled><i class="bi bi-check-circle-fill me-1"></i> Registered</button>'
@@ -994,7 +708,7 @@ function renderEvents() {
         }
 
         return '<div class="col-md-6 col-xl-4"><article class="event-card">' +
-            '<img class="card-photo" src="' + escapeHtml(image) + '" alt="' + escapeHtml(title) + '" loading="lazy" onerror="this.onerror=null;this.src=\'' + imageByCategory.default[0] + '\'">' +
+            '<img class="card-photo" src="' + escapeHtml(image) + '" alt="' + escapeHtml(title) + '" loading="lazy" onerror="this.onerror=null;this.src=' + "'" + imageByCategory.default[0] + "'" + '">' +
             '<div class="card-content"><div class="d-flex justify-content-between align-items-start gap-2">' +
             '<span class="pill">' + escapeHtml(event.category || event.club?.name || "Campus Event") + '</span>' +
             '<span class="pill">' + escapeHtml(fee) + '</span></div>' +
@@ -1010,33 +724,22 @@ function renderEvents() {
 async function loadMemberships() {
     if (currentRole === "student") {
         const result = await api("/api/memberships/my");
-
-        myMemberships = getArray(result, ["memberships", "data", "results"]);
-
+        myMemberships = getArray(result, ["memberships","data","results"]);
         $("registeredCount").textContent = registeredEventIds.size;
-
         renderClubs();
         return;
     }
 
     const result = await api("/api/memberships");
-
-    membershipsData = getArray(result, ["memberships", "requests", "data", "results"]);
-
-    const pending = membershipsData.filter(item =>
-        ["pending", "requested"].includes(String(item.status || "pending").toLowerCase())
-    );
-
+    membershipsData = getArray(result, ["memberships","requests","data","results"]);
+    const pending = membershipsData.filter(item => ["pending","requested"].includes(String(item.status || "pending").toLowerCase()));
     $("pendingCount").textContent = pending.length;
     $("registeredCount").textContent = membershipsData.length;
-
     if (!isStaff()) return;
 
     const body = $("requestsBody");
-
     if (!membershipsData.length) {
-        body.innerHTML =
-            '<tr><td colspan="4" class="text-center muted">No membership requests found.</td></tr>';
+        body.innerHTML = '<tr><td colspan="4" class="text-center muted">No membership requests found.</td></tr>';
         return;
     }
 
@@ -1045,12 +748,8 @@ async function loadMemberships() {
         const club = item.club || {};
         const status = String(item.status || "pending").toLowerCase();
         const id = normaliseId(item._id || item.id);
-
-        const actions = ["pending", "requested"].includes(status)
-            ? '<div class="d-flex gap-2">' +
-                '<button class="btn btn-sm btn-success" data-action="membership-status" data-id="' + escapeHtml(id) + '" data-status="approved">Approve</button>' +
-                '<button class="btn btn-sm btn-outline-danger" data-action="membership-status" data-id="' + escapeHtml(id) + '" data-status="rejected">Reject</button>' +
-              '</div>'
+        const actions = ["pending","requested"].includes(status)
+            ? '<div class="d-flex gap-2"><button class="btn btn-sm btn-success" data-action="membership-status" data-id="' + escapeHtml(id) + '" data-status="approved">Approve</button><button class="btn btn-sm btn-outline-danger" data-action="membership-status" data-id="' + escapeHtml(id) + '" data-status="rejected">Reject</button></div>'
             : '<span class="pill">' + escapeHtml(status) + '</span>';
 
         return '<tr><td>' + escapeHtml(student.name || student.fullName || "Student") +
@@ -1062,9 +761,8 @@ async function loadMemberships() {
 
 async function loadUsers() {
     if (currentRole !== "admin") return;
-
     const result = await api("/api/auth/users");
-    const users = getArray(result, ["users", "data", "results"]);
+    const users = getArray(result, ["users","data","results"]);
     const body = $("usersBody");
 
     if (!users.length) {
@@ -1084,99 +782,51 @@ async function loadUsers() {
 async function loadDashboard() {
     hideMessage();
     $("refreshBtn").disabled = true;
-
     try {
         await loadCurrentUser();
-
-        const tasks = [
-            loadClubs(),
-            loadEvents(),
-            loadMemberships()
-        ];
-
-        if (currentRole === "admin") {
-            tasks.push(loadUsers());
-        }
-
+        const tasks = [loadClubs(), loadEvents(), loadMemberships()];
+        if (currentRole === "admin") tasks.push(loadUsers());
         const results = await Promise.allSettled(tasks);
         const errors = results.filter(result => result.status === "rejected");
 
-        if (currentRole === "student") {
-            $("registeredCount").textContent = registeredEventIds.size;
-        }
+        if (currentRole === "student") $("registeredCount").textContent = registeredEventIds.size;
 
         if (errors.length) {
-            showMessage(
-                "Some dashboard information could not be loaded: " +
-                errors.map(result => result.reason?.message || "Request failed").join(" "),
-                "danger"
-            );
+            showMessage("Some dashboard information could not be loaded: " +
+                errors.map(result => result.reason?.message || "Request failed").join(" "), "danger");
         }
     } catch (error) {
-        showMessage(
-            error.message || "Could not load the dashboard. Please log in again.",
-            "danger"
-        );
+        showMessage(error.message || "Could not load the dashboard. Please log in again.", "danger");
     } finally {
         $("refreshBtn").disabled = false;
     }
 }
 
-/* Toggle the create forms. */
 $("refreshBtn").addEventListener("click", loadDashboard);
+$("createClubToggle").addEventListener("click", () => $("createClubPanel").classList.toggle("hidden"));
+$("cancelClub").addEventListener("click", () => $("createClubPanel").classList.add("hidden"));
+$("createEventToggle").addEventListener("click", () => $("createEventPanel").classList.toggle("hidden"));
+$("cancelEvent").addEventListener("click", () => $("createEventPanel").classList.add("hidden"));
 
-$("createClubToggle").addEventListener("click", () => {
-    $("createClubPanel").classList.toggle("hidden");
-});
-
-$("cancelClub").addEventListener("click", () => {
-    $("createClubPanel").classList.add("hidden");
-});
-
-$("createEventToggle").addEventListener("click", () => {
-    $("createEventPanel").classList.toggle("hidden");
-});
-
-$("cancelEvent").addEventListener("click", () => {
-    $("createEventPanel").classList.add("hidden");
-});
-
-/* Create Club */
 $("createClubForm").addEventListener("submit", async event => {
     event.preventDefault();
-
-    if (currentRole !== "admin") {
-        showMessage("Only admins can create clubs.", "danger");
-        return;
-    }
-
+    if (currentRole !== "admin") return showMessage("Only admins can create clubs.", "danger");
     const button = event.submitter;
-
     if (button) button.disabled = true;
 
     try {
-        const clubData = {
-            name: $("clubName").value.trim(),
-            category: $("clubCategory").value,
-            description: $("clubDescription").value.trim()
-        };
-
-        if (!clubData.name || !clubData.category || !clubData.description) {
-            throw new Error("Please fill in all club details.");
-        }
-
         await api("/api/clubs", {
-            method: "POST",
-            body: JSON.stringify(clubData)
+            method:"POST",
+            body:JSON.stringify({
+                name:$("clubName").value.trim(),
+                category:$("clubCategory").value,
+                description:$("clubDescription").value.trim()
+            })
         });
-
         $("createClubForm").reset();
         $("createClubPanel").classList.add("hidden");
-
-        showMessage("Club created successfully!", "success");
-
+        showMessage("Club created successfully.", "success");
         await loadClubs();
-
     } catch (error) {
         showMessage(error.message, "danger");
     } finally {
@@ -1184,57 +834,33 @@ $("createClubForm").addEventListener("submit", async event => {
     }
 });
 
-/* Create Event */
 $("createEventForm").addEventListener("submit", async event => {
     event.preventDefault();
-
-    if (!isStaff()) {
-        showMessage("You do not have permission to create events.", "danger");
-        return;
-    }
-
+    if (!isStaff()) return showMessage("You do not have permission to create events.", "danger");
     const button = event.submitter;
-
     if (button) button.disabled = true;
 
+    const clubId = $("eventClub").value;
+    const fee = Number($("eventFee").value);
+
     try {
-        const club = $("eventClub").value;
-        const dateValue = $("eventDate").value;
-
-        if (!club) {
-            throw new Error("Please select a club.");
-        }
-
-        if (!dateValue || Number.isNaN(new Date(dateValue).getTime())) {
-            throw new Error("Please select a valid event date and time.");
-        }
-
-        const eventData = {
-            title: $("eventTitle").value.trim(),
-            club: club,
-            date: new Date(dateValue).toISOString(),
-            venue: $("eventLocation").value,
-            description: $("eventDescription").value.trim(),
-            imageUrl: $("eventImage").value.trim()
-        };
-
-        if (!eventData.title || !eventData.venue || !eventData.description) {
-            throw new Error("Please fill in all required event details.");
-        }
-
         await api("/api/events", {
-            method: "POST",
-            body: JSON.stringify(eventData)
+            method:"POST",
+            body:JSON.stringify({
+                title:$("eventTitle").value.trim(),
+                clubId:clubId || undefined,
+                date:new Date($("eventDate").value).toISOString(),
+                location:$("eventLocation").value,
+                fee,
+                description:$("eventDescription").value.trim(),
+                image:$("eventImage").value.trim() || undefined
+            })
         });
-
         $("createEventForm").reset();
-        $("eventFee").value = "100";
+        $("eventFee").value = "0";
         $("createEventPanel").classList.add("hidden");
-
-        showMessage("Event created successfully!", "success");
-
+        showMessage("Event created successfully.", "success");
         await loadEvents();
-
     } catch (error) {
         showMessage(error.message, "danger");
     } finally {
@@ -1242,75 +868,71 @@ $("createEventForm").addEventListener("submit", async event => {
     }
 });
 
-/* Handle club, membership, and event actions. */
+/* Show only the selected payment method's fields. */
+document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
+    radio.addEventListener("change", () => {
+        $("upiFields").classList.toggle("hidden", radio.value !== "upi" || !radio.checked);
+        $("cardFields").classList.toggle("hidden", radio.value !== "card" || !radio.checked);
+        $("registrationMessage").className = "alert hidden mt-3 mb-0";
+    });
+});
+
+/* Friendly card-number formatting. No card details are sent to the server. */
+$("cardNumber").addEventListener("input", event => {
+    const digits = event.target.value.replace(/\D/g, "").slice(0, 19);
+    event.target.value = digits.replace(/(.{4})/g, "$1 ").trim();
+});
+
+$("cardExpiry").addEventListener("input", event => {
+    const digits = event.target.value.replace(/\D/g, "").slice(0, 4);
+    event.target.value = digits.length > 2 ? digits.slice(0, 2) + "/" + digits.slice(2) : digits;
+});
+
+$("cardCvv").addEventListener("input", event => {
+    event.target.value = event.target.value.replace(/\D/g, "").slice(0, 4);
+});
+
 document.addEventListener("click", async event => {
     const button = event.target.closest("[data-action]");
-
     if (!button) return;
 
     const action = button.dataset.action;
     const id = button.dataset.id;
-
     if (!id) return;
-
     button.disabled = true;
 
     try {
         if (action === "join-club") {
-            if (currentRole !== "student") {
-                throw new Error("Only students can request club membership.");
-            }
-
-            await api("/api/clubs/" + encodeURIComponent(id) + "/join", {
-                method: "POST"
-            });
-
+            if (currentRole !== "student") throw new Error("Only students can request club membership.");
+            await api("/api/clubs/" + encodeURIComponent(id) + "/join", {method:"POST"});
             showMessage("Membership request submitted.", "success");
-
             await loadMemberships();
             await loadClubs();
         }
 
         if (action === "membership-status") {
-            if (!isStaff()) {
-                throw new Error("You do not have permission to manage requests.");
-            }
-
+            if (!isStaff()) throw new Error("You do not have permission to manage requests.");
             await api("/api/memberships/" + encodeURIComponent(id) + "/status", {
-                method: "PUT",
-                body: JSON.stringify({status: button.dataset.status})
+                method:"PUT", body:JSON.stringify({status:button.dataset.status})
             });
-
             showMessage("Membership request updated.", "success");
-
             await loadMemberships();
         }
 
         if (action === "register-event") {
-            if (currentRole !== "student") {
-                throw new Error("Only students can register for events.");
-            }
-
+            if (currentRole !== "student") throw new Error("Only students can register for events.");
             const selected = eventsData.find(item => eventId(item) === id);
+            if (!selected) throw new Error("Event not found.");
 
-            if (!selected) {
-                throw new Error("Event not found.");
-            }
-
-            const statusResult = await api(
-                "/api/events/" + encodeURIComponent(id) + "/registration"
-            );
-
+            const statusResult = await api("/api/events/" + encodeURIComponent(id) + "/registration");
             if (statusResult.registered) {
                 registeredEventIds.add(id);
                 renderEvents();
                 showMessage("You are already registered for this event.", "info");
                 return;
             }
-
             openRegistration(selected);
         }
-
     } catch (error) {
         showMessage(error.message || "The request could not be completed.", "danger");
     } finally {
@@ -1318,38 +940,60 @@ document.addEventListener("click", async event => {
     }
 });
 
-/* Event registration modal */
 function openRegistration(event) {
     selectedEvent = event;
-
     $("modalEventTitle").textContent = event.title || event.name || "Campus Event";
-
-    $("modalEventDetails").textContent =
-        formatDate(event.date || event.startDate || event.eventDate) +
-        " · " + eventLocation(event) +
-        " · " + eventFee(event);
+    $("modalEventDetails").textContent = formatDate(event.date || event.startDate || event.eventDate) +
+        " · " + eventLocation(event) + " · " + eventFee(event);
 
     const paid = eventAmount(event) > 0;
-
     $("paymentFields").classList.toggle("hidden", !paid);
     $("paymentAmount").textContent = eventFee(event);
 
+    document.querySelectorAll('input[name="paymentMethod"]').forEach(input => input.checked = false);
+    $("upiFields").classList.add("hidden");
+    $("cardFields").classList.add("hidden");
+
+    // Clear previous form values when a new event is selected.
+    ["upiId","upiName","cardName","cardNumber","cardExpiry","cardCvv"].forEach(id => $(id).value = "");
+
     $("registrationMessage").className = "alert hidden mt-3 mb-0";
     $("registrationMessage").textContent = "";
-
     $("confirmRegistrationBtn").disabled = false;
-    $("confirmRegistrationBtn").textContent = paid
-        ? "Complete Registration"
-        : "Register Free";
-
+    $("confirmRegistrationBtn").textContent = paid ? "Complete Registration" : "Register Free";
     registerModal.show();
 }
 
 function showRegistrationMessage(text, type) {
     const message = $("registrationMessage");
-
     message.className = "alert alert-" + type + " mt-3 mb-0";
     message.textContent = text;
+}
+
+function validatePaymentForm(method) {
+    if (method === "upi") {
+        const upiId = $("upiId").value.trim();
+        const upiName = $("upiName").value.trim();
+
+        if (!upiName) return "Enter the account holder name.";
+        if (!/^[\w.-]{2,256}@[A-Za-z]{2,64}$/.test(upiId)) return "Enter a valid UPI ID, such as name@upi.";
+        return "";
+    }
+
+    if (method === "card") {
+        const name = $("cardName").value.trim();
+        const number = $("cardNumber").value.replace(/\D/g, "");
+        const expiry = $("cardExpiry").value.trim();
+        const cvv = $("cardCvv").value.trim();
+
+        if (!name) return "Enter the cardholder name.";
+        if (number.length < 12 || number.length > 19) return "Enter a card number with 12 to 19 digits.";
+        if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiry)) return "Enter the expiry date in MM/YY format.";
+        if (!/^\d{3,4}$/.test(cvv)) return "Enter a CVV with 3 or 4 digits.";
+        return "";
+    }
+
+    return "Choose UPI or Card to continue.";
 }
 
 $("confirmRegistrationBtn").addEventListener("click", async () => {
@@ -1358,49 +1002,48 @@ $("confirmRegistrationBtn").addEventListener("click", async () => {
     const event = selectedEvent;
     const id = eventId(event);
     const button = $("confirmRegistrationBtn");
-
     const paid = eventAmount(event) > 0;
-    const method = paid ? "demo" : "free";
+    const method = paid ? document.querySelector('input[name="paymentMethod"]:checked')?.value : "free";
+
+    if (paid) {
+        const validationError = validatePaymentForm(method);
+        if (validationError) {
+            showRegistrationMessage(validationError, "warning");
+            return;
+        }
+    }
 
     button.disabled = true;
     button.textContent = "Completing registration...";
 
     try {
+        /*
+          Only the payment method is sent to the backend.
+          UPI ID, card number, expiry date, and CVV are never submitted
+          or stored by this page.
+        */
         await api("/api/events/" + encodeURIComponent(id) + "/pay", {
-            method: "POST",
-            body: JSON.stringify({paymentMethod: method})
+            method:"POST",
+            body:JSON.stringify({paymentMethod:method})
         });
 
         registeredEventIds.add(id);
         renderEvents();
-
         $("registeredCount").textContent = registeredEventIds.size;
-
-        showRegistrationMessage(
-            "Your event registration is complete!",
-            "success"
-        );
-
+        showRegistrationMessage("Your event registration is complete!", "success");
         button.textContent = "Registered";
 
         try {
             await loadEvents();
         } catch (refreshError) {
-            console.error("Event list refresh failed:", refreshError);
+            console.error("Registration succeeded, but event list refresh failed:", refreshError);
         }
 
         setTimeout(() => registerModal.hide(), 1200);
-
     } catch (error) {
-        showRegistrationMessage(
-            error.message || "Registration could not be completed.",
-            "danger"
-        );
-
+        showRegistrationMessage(error.message || "Registration could not be completed.", "danger");
         button.disabled = false;
-        button.textContent = paid
-            ? "Complete Registration"
-            : "Register Free";
+        button.textContent = paid ? "Complete Registration" : "Register Free";
     }
 });
 
@@ -1409,19 +1052,13 @@ $("registerModal").addEventListener("hidden.bs.modal", () => {
     $("confirmRegistrationBtn").disabled = false;
 });
 
-/* Logout */
 $("logoutBtn").addEventListener("click", async () => {
     const button = $("logoutBtn");
-
     button.disabled = true;
-    button.innerHTML =
-        '<span class="spinner-border spinner-border-sm me-1"></span> Logging out';
+    button.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span> Logging out';
 
     try {
-        await api("/api/auth/logout", {
-            method: "POST",
-            body: JSON.stringify({})
-        });
+        await api("/api/auth/logout", {method:"POST", body:JSON.stringify({})});
     } catch (error) {
         console.warn("Logout request:", error.message);
     } finally {
@@ -1429,12 +1066,10 @@ $("logoutBtn").addEventListener("click", async () => {
     }
 });
 
-/* Start dashboard */
 (async function init() {
     registerModal = new bootstrap.Modal($("registerModal"));
     await loadDashboard();
 })();
 </script>
-
 </body>
 </html>
